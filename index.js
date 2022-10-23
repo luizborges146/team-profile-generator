@@ -27,3 +27,27 @@ function menu() {
     });
 }
 
+function addManager() {
+    inquirer.prompt([
+        {
+            type:"input",
+            name:"name",
+            message:"What is the manager name?"
+        },
+        {
+            type:"input",
+            name:"employeeId",
+            message:"What is the manager employee ID?"
+        },
+        {
+            type:"input",
+            name:"email",
+            message:"What is the manager email?"
+        },
+        {
+            type:"input",
+            name:"office",
+            message:"What is the manager office number?"
+        },
+    ])
+}
