@@ -31,7 +31,7 @@ const generateTeamInfo = (team) => {
            <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engeneer.id}</li>
             <li class="list-group-item">Email: <span id="email"><a href="mailto:${engeneer.email}">${engeneer.email}</a></span></li>
-            <li class="list-group-item">Office Number: ${engeneer.gitUsername}</li>
+            <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.githubUsername}">${engineer.githubUsername}</a></li>
             </ul>
         </div>
         `;
@@ -49,7 +49,7 @@ const generateTeamInfo = (team) => {
            <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${intern.id}</li>
             <li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
-            <li class="list-group-item">Office Number: ${intern.school}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
             </ul>
         </div>
         `;
@@ -70,5 +70,33 @@ const generateTeamInfo = (team) => {
             createIntern(team[i]);
         }
     }
+
+    return teamArray.join("");
+}
+
+module.exports = team => {
+
+    return `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/00f313d45b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../dist/style.css" />
+    <title>Team Profile Generator</title>
+</head>
+<body>
+    <header>
+    <h1> My Team </h1>
+    </header>
+    <main> ${generateTeamInfo(team)} </main>
+     
+</body>
+</html>
+    `;
 }
 
