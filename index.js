@@ -1,6 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
+// lib constructors
+const Engineer = require("./lib/Engineer")
+
 
 const team = [];
 
@@ -104,8 +107,8 @@ function addEngineer() {
     ])
     .then((answers) => {
         console.log(answers);
-        // const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
-        // team.push(engineer);
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+        team.push(engineer);
         menu();
     })
 }
