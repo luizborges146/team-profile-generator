@@ -21,7 +21,7 @@ const generateTeamInfo = (team) => {
         
         teamArray.push(managerArray)
     };
-    const createEngeneer = engeneer => {
+    const createEngineer = engeneer => {
 
         let engineerArray = `
         <div class="card" style="width: 18rem;">
@@ -39,7 +39,7 @@ const generateTeamInfo = (team) => {
         teamArray.push(engineerArray)
     };
 
-    const createInter = intern => {
+    const createIntern = intern => {
 
         let internArray = `
         <div class="card" style="width: 18rem;">
@@ -56,4 +56,19 @@ const generateTeamInfo = (team) => {
         
         teamArray.push(internArray)
     };
+
+    for (var i = 0; i < team.length; i++) {
+        if (team[i].getRole() === "Manager"){
+            createManager(team[i]);
+        }
+    
+        if (team[i].getRole() === "Engineer"){
+            createEngineer(team[i]);
+        }   
+    
+        if (team[i].getRole() === "Intern"){
+            createIntern(team[i]);
+        }
+    }
 }
+
