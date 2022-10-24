@@ -2,7 +2,9 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 // lib constructors
-const Engineer = require("./lib/Engineer")
+const Engineer = require("./lib/Engineer");
+const Engineer = require("./lib/Engineer");
+const Intern = require ("./lib/Intern")
 
 
 const team = [];
@@ -140,8 +142,8 @@ function addIntern() {
     ])
     .then((answers) => {
         console.log(answers);
-        // const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
-        // team.push(intern);
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        team.push(intern);
         menu();
     })
 }
