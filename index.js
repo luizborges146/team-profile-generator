@@ -6,6 +6,16 @@ const team = [];
 
 // #########################  Create a Menu  ###############################################
 
+function Manager(name, employeeId, email, officeN) {
+    this.name = name;
+    this.employeeId = employeeId;
+    this.email = email;
+    this.officeN = officeN;
+}
+
+
+// #########################  Create a Menu  ###############################################
+
 function menu() {
     inquirer
     .prompt([
@@ -61,8 +71,8 @@ function addManager() {
     ])
     .then((answers) => {
         console.log(answers);
-        // const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice);
-        // team.push(manager);
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice);
+        team.push(manager);
         menu();
     })
 }
