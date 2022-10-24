@@ -6,6 +6,9 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require ("./lib/Intern")
 
+// path
+const generateTeam = require("./process-info/team-info.js")
+
 const team = [];
 
 // #########################  Create a Menu  ###############################################
@@ -137,12 +140,9 @@ function addIntern() {
     })
 };
 
-const createTeam = () => {
-    // for (var i = 0; i < team.length; i++) {
-        console.log(team);
-    // }
-    
-    // fs.writeFileSync()
+function createTeam() {
+    console.log(team);
+    fs.writeFileSync("./output/index.html",generateTeam(team)),"utf-8";    
 }
 
 addManager()

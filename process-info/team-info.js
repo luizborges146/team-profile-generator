@@ -21,16 +21,16 @@ const generateTeamInfo = (team) => {
         
         teamArray.push(managerArray)
     };
-    const createEngineer = engeneer => {
+    const createEngineer = engineer => {
 
         let engineerArray = `
         <div class="card" style="width: 18rem;">
             <div class="card-header">
-           ${engeneer.name} <br/>
+           ${engineer.name} <br/>
            <i class="fas fa-mug-hot"></i>Manager</div>
            <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${engeneer.id}</li>
-            <li class="list-group-item">Email: <span id="email"><a href="mailto:${engeneer.email}">${engeneer.email}</a></span></li>
+            <li class="list-group-item">ID: ${engineer.id}</li>
+            <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
             <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.githubUsername}">${engineer.githubUsername}</a></li>
             </ul>
         </div>
