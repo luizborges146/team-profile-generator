@@ -2,22 +2,11 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 // lib constructors
-const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require ("./lib/Intern")
 
-
 const team = [];
-
-// #########################  Create a Menu  ###############################################
-
-function Manager(name, employeeId, email, officeN) {
-    this.name = name;
-    this.employeeId = employeeId;
-    this.email = email;
-    this.officeN = officeN;
-}
-
 
 // #########################  Create a Menu  ###############################################
 
@@ -146,6 +135,14 @@ function addIntern() {
         team.push(intern);
         menu();
     })
+};
+
+const createTeam = () => {
+    // for (var i = 0; i < team.length; i++) {
+        console.log(team);
+    // }
+    
+    // fs.writeFileSync()
 }
 
 addManager()
