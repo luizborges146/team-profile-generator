@@ -1,15 +1,15 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// lib constructors
-const Manager = require("./lib/Manager");
+// lib  -  constructors
+const Manager = require("./lib/Manager"); 
 const Engineer = require("./lib/Engineer");
 const Intern = require ("./lib/Intern")
 
 // path
 const generateTeam = require("./process-info/team-info.js")
 
-const team = [];
+const team = []; // to push the user input
 
 // #########################  Create a Menu  ###############################################
 
@@ -20,15 +20,15 @@ function menu() {
             type: "list",
             name:"menu",
             message:"Please, select the type of team member you would like to add:",
-            choices:["Manager", "Engineer", "Intern","Complete"]
+            choices:[/*"Manager",*/"Engineer", "Intern","Complete"]
         }
     ])
     .then((userAnswer) => {
         console.log(userAnswer)
         switch(userAnswer.menu) {
-            case "Manager":
-                addManager();
-                break;
+            // case "Manager":
+            //     addManager();
+            //     break;
             case "Engineer":
                 addEngineer();
                 break;
@@ -140,9 +140,9 @@ function addIntern() {
     })
 };
 
-function createTeam() {
+function createTeam() { // create the team infomraiton  and select where it should write file 
     console.log(team);
     fs.writeFileSync("./output/index.html",generateTeam(team)),"utf-8";    
 }
-
+// iniciate the program asking for the manager infomration
 addManager()
