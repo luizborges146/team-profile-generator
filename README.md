@@ -1,6 +1,7 @@
 # TEAM PROFILE GENERATOR 
 
 Link to [GitHub repository](https://github.com/luizborges146/team-profile-generator)
+[Deployed](https://luizborges146.github.io/team-profile-generator/)
 
 Link to [Video](https://drive.google.com/file/d/1FlghDPIYEfP5hZ6Ku1kNH3F6i7B2TFUz/view)
 
