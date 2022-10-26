@@ -27,9 +27,9 @@ Simple and visual access to the team information.
    * Display all Name, Email, ID for all users.
    * Email contain a function that will automatically open your email and filled up TO: with the employee email,
    * The engineer GitHub user account is link and it will take you to the engineer profile.
-   * Mobile friendly
+   * Mobile friendly, the picture below was simulated in the user phone.
 
-![alt weatherHomePage](assets/images/weather_page.png)
+![alt weatherHomePage](assets/images/Profile-generator.png)
 
 
 #### Function below will take the manager infomration that was added in the application, it will add it to template literals and then apply this information on the HTML.
