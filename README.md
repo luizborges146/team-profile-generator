@@ -2,7 +2,12 @@
 
 Link to [GitHub repository](https://github.com/luizborges146/team-profile-generator)
 
+Link to [Video](https://drive.google.com/file/d/1FlghDPIYEfP5hZ6Ku1kNH3F6i7B2TFUz/view)
+
+
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
     
 ## Table of Contents
     

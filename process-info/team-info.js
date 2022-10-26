@@ -6,7 +6,6 @@ const generateTeamInfo = (team) => {
 
     // ##################  Create a manager  ##################
     const createManager = manager => {
-
         let managerArray = 
 `
 <div class="card">
@@ -19,8 +18,7 @@ const generateTeamInfo = (team) => {
         <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
     </ul>
 </div>
-`;
-        
+`;     
         teamArray.push(managerArray)
     };
 
